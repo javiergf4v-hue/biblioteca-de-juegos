@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ludoteca — Biblioteca de reseñas de videojuegos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+<header class="site-header">
+<div class="header-inner">
+<h1>Ludoteca</h1>
+<p class="tagline">Catálogo de reseñas de videojuegos, ficha a ficha.</p>
+</div>
+</header>
+
+<main>
+<section class="controls" aria-label="Filtros de búsqueda">
+<input
+type="text"
+id="search-input"
+placeholder="Buscar por título…"
+aria-label="Buscar juego por título"
+>
+
+<select id="genre-filter" aria-label="Filtrar por género">
+<option value="">Todos los géneros</option>
+</select>
+
+<select id="platform-filter" aria-label="Filtrar por plataforma">
+<option value="">Todas las plataformas</option>
+</select>
+</section>
+
+<p id="results-count" class="results-count"></p>
+
+<section id="game-grid" class="game-grid" aria-live="polite">
+<!-- Las fichas se generan dinámicamente desde script.js -->
+</section>
+
+<p id="empty-message" class="empty-message" hidden>
+No hay fichas que coincidan con esa búsqueda.
+</p>
+</main>
+
+<footer class="site-footer">
+<p>Ludoteca — Trabajo de clase (SMR). Datos ficticios con fines de práctica.</p>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>
